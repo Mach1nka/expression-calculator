@@ -65,7 +65,7 @@ function expressionCalculator(expr) {
       return stack3.pop();
     }
     if(Number.isNaN(rpnToRes(strToRpn(expr)))) throw new Error("ExpressionError: Brackets must be paired");
-    else if(!isFinite(rpnToRes(strToRpn(expr))) || rpnToRes(strToRpn(expr))==651 ) throw new Error("TypeError: Division by zero.");
+    else if(!isFinite(rpnToRes(strToRpn(expr)))) throw new Error("TypeError: Division by zero.");
     else return rpnToRes(strToRpn(expr));
 }
 module.exports = {
